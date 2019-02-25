@@ -1,29 +1,32 @@
-<div class="content">
-    <div style="display:block; width: 100%">
-        <slideshow [imageUrls]="images" [height]="'200px'" [minHeight]="" [showArrows]="false" [autoPlay]="true"
-            [autoPlayInterval]="5000" [backgroundSize]="'cover'" [showDots]="true" [dotColor]="'#010101'"
-            [lazyLoad]="true" [autoPlayWaitForLazyLoad]="true" [hideOnNoSlides]="true">
-        </slideshow>
+<div class="content mt-4">
+  <div style="display:block; width: 100%">
+    <slideshow [imageUrls]="images" [height]="'200px'" [minHeight]="" [showArrows]="false" [autoPlay]="true"
+      [autoPlayInterval]="5000" [backgroundSize]="'cover'" [showDots]="true" [dotColor]="'#010101'" [lazyLoad]="true"
+      [autoPlayWaitForLazyLoad]="true" [hideOnNoSlides]="true">
+    </slideshow>
+  </div>
+  <div class="row pt-2">
+    <div class="col-12">
+      <h4 class="font-color-title">สินค้ามาใหม่</h4>
     </div>
-    <div class="row pt-2">
-        <div class="col-12">
-            <h4 class="font-color-title">สินค้ามาใหม่</h4>
-        </div>
+  </div>
+  <div class="row">
+    <div class="col-4" *ngFor="let item of [1,2,3]">
+      <mat-card class="pb-0" (click)="clickToHome()">
+        <img mat-card-image
+          src="https://scontent.fbkk8-3.fna.fbcdn.net/v/t45.5328-0/p180x540/29354270_2043210142374506_9048600226918563840_n.jpg?_nc_cat=111&_nc_eui2=AeFGS2Hrwmogthlt6B5pjzB7LtNdBSTMG6FLXAMVHi3HGndRt-CZfSXfycDTPPJZwUsEIfB6zMlJdoxkjZcab1voZDwjnwmAJgpi9vmeQtyxAQ&_nc_ht=scontent.fbkk8-3.fna&oh=1f5a5eff40c501539f7061d42e3f7e54&oe=5D227A63"
+          alt="Photo of a Shiba Inu">
+        <mat-card-content class="mb-0">
+          <p class="mb-0">
+            แป้งตลับทาเเล้วสวยม้ากมากกกกกกกกกกกกกกกกกกก
+          </p>
+          <p class="mb-0">
+            ฿2540
+          </p>
+          <img class="heart-img mb-2"
+            src="https://res.cloudinary.com/dyiuidzsc/image/upload/v1548908336/web-sharing/icon-heart.png" alt="">
+        </mat-card-content>
+      </mat-card>
     </div>
-    <div class="row">
-        <div class="col-4" *ngFor="let item of [1,2,3]">
-            <mat-card class="example-card">
-                <img mat-card-image src="https://scontent.fbkk8-3.fna.fbcdn.net/v/t45.5328-0/p180x540/29354270_2043210142374506_9048600226918563840_n.jpg?_nc_cat=111&_nc_eui2=AeFGS2Hrwmogthlt6B5pjzB7LtNdBSTMG6FLXAMVHi3HGndRt-CZfSXfycDTPPJZwUsEIfB6zMlJdoxkjZcab1voZDwjnwmAJgpi9vmeQtyxAQ&_nc_ht=scontent.fbkk8-3.fna&oh=1f5a5eff40c501539f7061d42e3f7e54&oe=5D227A63" alt="Photo of a Shiba Inu">
-                <mat-card-content>
-                  <p>
-                    sss  
-                  </p>
-                </mat-card-content>
-                <mat-card-actions>
-                  <button mat-button>LIKE</button>
-                  <button mat-button>SHARE</button>
-                </mat-card-actions>
-              </mat-card>
-        </div>
-    </div>
+  </div>
 </div>

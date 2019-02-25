@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from '@angular/router';
 
 @Component({
   selector: "app-home",
@@ -18,7 +19,13 @@ export class HomeComponent implements OnInit {
       "url": "https://cdn.pixabay.com/photo/2015/09/10/16/19/alive-934671_1280.jpg"
     }
   ]
-  constructor() { }
+  constructor(
+    private router: Router,
+  ) { }
 
   ngOnInit() { }
+
+  clickToHome() {
+    this.router.navigate(['/product-detail']);
+  }
 }
