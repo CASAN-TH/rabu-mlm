@@ -21,6 +21,7 @@ import { SocialLoginModule, AuthServiceConfig, LoginOpt, FacebookLoginProvider }
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { MatDialogModule } from "@angular/material";
 import { LoginModalsComponent } from './modals/login-modals/login-modals.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 const fbLoginOptions: LoginOpt = {
   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -50,7 +51,8 @@ const apiSrvCfg = environment;
     ForgotComponent,
     HeaderToolbarComponent,
     ProductDetailComponent,
-    LoginModalsComponent
+    LoginModalsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
