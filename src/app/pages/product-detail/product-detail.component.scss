@@ -20,3 +20,17 @@
     width: 100% !important;
     text-align: center;
 }
+
+.btn-size {
+    width: 400px;
+}
+
+.btn-type-selected {
+    border: 1px solid;
+    height: 50px;
+    border-color: lightgray;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: lightgrey;
+}

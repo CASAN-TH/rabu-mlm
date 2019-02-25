@@ -21,6 +21,7 @@ import { SocialLoginModule, AuthServiceConfig, LoginOpt, FacebookLoginProvider }
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { MatDialogModule } from "@angular/material";
 import { LoginModalsComponent } from './modals/login-modals/login-modals.component';
+import { MatSelectModule } from '@angular/material/select';
 import { CartComponent } from './pages/cart/cart.component';
 
 const fbLoginOptions: LoginOpt = {
@@ -63,6 +64,7 @@ const apiSrvCfg = environment;
     SlideshowModule,
     SocialLoginModule,
     MatDialogModule,
+    MatSelectModule,
     FacebookModule.forRoot(),
     ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: "never" }),
     HttpClientModule,
