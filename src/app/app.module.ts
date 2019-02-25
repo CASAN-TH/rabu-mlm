@@ -21,6 +21,7 @@ import { SocialLoginModule, AuthServiceConfig, LoginOpt, FacebookLoginProvider }
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { MatDialogModule } from "@angular/material";
 import { LoginModalsComponent } from './modals/login-modals/login-modals.component';
+import { MatSelectModule } from '@angular/material/select';
 
 const fbLoginOptions: LoginOpt = {
   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -61,6 +62,7 @@ const apiSrvCfg = environment;
     SlideshowModule,
     SocialLoginModule,
     MatDialogModule,
+    MatSelectModule,
     FacebookModule.forRoot(),
     ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: "never" }),
     HttpClientModule,

@@ -12,11 +12,16 @@ export class ProductDetailComponent implements OnInit {
 
   productDetail: any = {
     data:{
-      name: "ลิปติกแดง",
+      name: "ทดสอบลิปติกแดง",
       price: "120",
       shipingfee: [{
+        _id: "001",
         name: "ไปรษณีไทย",
         price: "50"
+      },{
+        _id: "002",
+        name: "Kerry",
+        price: "60"
       }],
       images:[{
         "url": "https://cf.shopee.co.th/file/a1089bef5b9230f470fb9493ace9dbde"
@@ -30,13 +35,21 @@ export class ProductDetailComponent implements OnInit {
       },{
         name: "สีน้ำเงิน"
       },{
-        name: "สำแดง"
+        name: "สีแดง"
       },{
         name: "สีเขียว"
       }]
 
     }
-  }
+  };
+
+  selectedType: any = {
+    name: ""
+  };
+
+  selection: any = {
+    _id: ""
+  };
 
   constructor(public dialog: MatDialog) { }
 
@@ -54,6 +67,12 @@ export class ProductDetailComponent implements OnInit {
       // this.animal = result;
     });
   }
+
+  selectType(item) {
+    this.selectedType = item;
+    console.log(this.selection)
+    console.log(this.selectedType);
+  };
 
 }
 
