@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialUser, AuthService, FacebookLoginProvider } from 'angularx-social-login';
+import { MatDialogRef, MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-login-modals',
@@ -13,6 +14,8 @@ export class LoginModalsComponent implements OnInit {
   private loggedIn: boolean;
   constructor(
     private authService: AuthService,
+    private thisDialogRef: MatDialogRef<LoginModalsComponent>,
+    public dialog: MatDialog,
   ) { }
   signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
@@ -29,6 +32,7 @@ export class LoginModalsComponent implements OnInit {
       this.dataUser = JSON.parse(window.localStorage.getItem('@user'));
 
       this.loggedIn = (user != null);
+      this.thisDialogRef.close('close');
     });
 
   }
