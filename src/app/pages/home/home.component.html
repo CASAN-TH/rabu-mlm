@@ -11,7 +11,7 @@
     </div>
   </div>
   <div class="row" *ngIf="data">
-    <div class="col-4" *ngFor="let item of data">
+    <div class="col-12 col-sm-12 col-md-4 mb-3" *ngFor="let item of data">
       <mat-card class="pb-0" (click)="clickToHome()">
         <img mat-card-image class="" [src]="item.image.url">
         <mat-card-content class="mb-0">

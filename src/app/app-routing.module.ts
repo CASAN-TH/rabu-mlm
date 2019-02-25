@@ -6,6 +6,7 @@ import { RegisterComponent } from "./pages/register/register.component";
 import { ForgotComponent } from "./pages/forgot/forgot.component";
 import { AuthGuardService } from "ng6-md-auth";
 import { ProductDetailComponent } from "./pages/product-detail/product-detail.component";
+import { CartComponent } from "./pages/cart/cart.component";
 
 const routes: Routes = [
   {
@@ -17,7 +18,8 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "register", component: RegisterComponent },
   { path: "forgot", component: ForgotComponent },
-  { path: "product-detail", component: ProductDetailComponent }
+  { path: "product-detail", component: ProductDetailComponent },
+  { path: "cart", component: CartComponent }
   
 ];
 

@@ -22,6 +22,7 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
 import { MatDialogModule } from "@angular/material";
 import { LoginModalsComponent } from './modals/login-modals/login-modals.component';
 import { MatSelectModule } from '@angular/material/select';
+import { CartComponent } from './pages/cart/cart.component';
 
 const fbLoginOptions: LoginOpt = {
   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -34,7 +35,7 @@ const fbLoginOptions: LoginOpt = {
 let config = new AuthServiceConfig([
   {
     id: FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider("2134431583284588", fbLoginOptions)
+    provider: new FacebookLoginProvider("443146396424487", fbLoginOptions)
   }
 ]);
 
@@ -51,7 +52,8 @@ const apiSrvCfg = environment;
     ForgotComponent,
     HeaderToolbarComponent,
     ProductDetailComponent,
-    LoginModalsComponent
+    LoginModalsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
