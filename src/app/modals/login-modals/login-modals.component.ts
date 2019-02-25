@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from "angularx-social-login";
-import { SocialUser } from "angularx-social-login";
-import { FacebookLoginProvider, GoogleLoginProvider, LinkedInLoginProvider } from "angularx-social-login"
+import { SocialUser, AuthService, FacebookLoginProvider } from 'angularx-social-login';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-login-modals',
+  templateUrl: './login-modals.component.html',
+  styleUrls: ['./login-modals.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginModalsComponent implements OnInit {
+
   dataUser: any;
   private user: SocialUser;
   private loggedIn: boolean;
