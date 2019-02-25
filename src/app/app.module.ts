@@ -16,6 +16,7 @@ import { HeaderToolbarComponent } from "./components/header-toolbar/header-toolb
 import { environment } from "src/environments/environment";
 import { AuthModule } from "ng6-md-auth";
 import { SlideshowModule } from 'ng-simple-slideshow';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 
 
 const apiSrvCfg = environment;
@@ -26,7 +27,8 @@ const apiSrvCfg = environment;
     HomeComponent,
     RegisterComponent,
     ForgotComponent,
-    HeaderToolbarComponent
+    HeaderToolbarComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
