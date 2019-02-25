@@ -1,5 +1,22 @@
 .images-slide {
     display: block;
     width: 100%;
+}
 
+.price-color {
+    color: red;
+}
+
+.type-contain {
+    border: 1px solid;
+    height: 50px;
+    border-color: lightgray;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.type-name {
+    width: 100% !important;
+    text-align: center;
 }
