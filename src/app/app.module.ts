@@ -19,6 +19,8 @@ import { AuthModule } from "ng6-md-auth";
 import { SlideshowModule } from 'ng-simple-slideshow';
 import { SocialLoginModule, AuthServiceConfig, LoginOpt, FacebookLoginProvider } from "angularx-social-login";
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { MatDialogModule } from "@angular/material";
+import { LoginModalsComponent } from './modals/login-modals/login-modals.component';
 
 const fbLoginOptions: LoginOpt = {
   scope: 'pages_messaging,pages_messaging_subscriptions,email,pages_show_list,manage_pages',
@@ -47,7 +49,8 @@ const apiSrvCfg = environment;
     RegisterComponent,
     ForgotComponent,
     HeaderToolbarComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    LoginModalsComponent
   ],
   imports: [
     BrowserModule,
@@ -57,11 +60,15 @@ const apiSrvCfg = environment;
     FormsModule,
     SlideshowModule,
     SocialLoginModule,
+    MatDialogModule,
     FacebookModule.forRoot(),
     ReactiveFormsModule.withConfig({ warnOnNgModelWithFormControl: "never" }),
     HttpClientModule,
     NgxSpinnerModule,
     AuthModule.forRoot(apiSrvCfg)
+  ],
+  entryComponents: [
+    LoginModalsComponent
   ],
   providers: [
     {
