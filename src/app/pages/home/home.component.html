@@ -1,6 +1,6 @@
 <div class="content mt-4">
   <div style="display:block; width: 100%">
-    <slideshow [imageUrls]="images" [height]="'200px'" [minHeight]="" [showArrows]="false" [autoPlay]="true"
+    <slideshow [imageUrls]="images" [height]="'270px'" [minHeight]="" [showArrows]="false" [autoPlay]="true"
       [autoPlayInterval]="5000" [backgroundSize]="'cover'" [showDots]="true" [dotColor]="'#010101'" [lazyLoad]="true"
       [autoPlayWaitForLazyLoad]="true" [hideOnNoSlides]="true">
     </slideshow>
@@ -13,7 +13,7 @@
   <div class="row" *ngIf="data">
     <div class="col-4" *ngFor="let item of data">
       <mat-card class="pb-0" (click)="clickToHome()">
-        <img mat-card-image class="prod-img" [src]="item.image.url">
+        <img mat-card-image class="" [src]="item.image.url">
         <mat-card-content class="mb-0">
           <p class="mb-0">
             {{item.name}}
