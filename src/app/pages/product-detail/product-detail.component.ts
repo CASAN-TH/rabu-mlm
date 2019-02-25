@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { LoginModalsComponent } from './../../modals/login-modals/login-modals.component';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -12,38 +13,7 @@ import { MatDialog } from '@angular/material';
 export class ProductDetailComponent implements OnInit {
   loadData: any;
   user: any;
-  productDetail: any = {
-    data: {
-      name: "ทดสอบลิปติกแดง",
-      price: "120",
-      shipingfee: [{
-        _id: "001",
-        name: "ไปรษณีไทย",
-        price: "50"
-      }, {
-        _id: "002",
-        name: "Kerry",
-        price: "60"
-      }],
-      images: [{
-        "url": "https://cf.shopee.co.th/file/a1089bef5b9230f470fb9493ace9dbde"
-      }, {
-        "url": "https://cf.shopee.co.th/file/5587aeb773e8633236061880e481279a"
-      }, {
-        "url": "https://cf.shopee.co.th/file/d93b05570158112438f4544fd0cea81a"
-      }],
-      type: [{
-        name: "สีชมพู"
-      }, {
-        name: "สีน้ำเงิน"
-      }, {
-        name: "สีแดง"
-      }, {
-        name: "สีเขียว"
-      }]
-
-    }
-  };
+  productDetail: any;
 
   selectedType: any = {
     name: ""
@@ -55,13 +25,21 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     public dialog: MatDialog,
-    public router: Router
+    public router: Router,
+    private http: HttpClient
   ) { }
 
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('@user'));
     console.log('loguser' + this.user);
+    this.getDataProduct();
   }
+
+  async getDataProduct(){
+    this.productDetail = await this.http.get('../../../assets/jsons/product-detail.json').toPromise();
+    // console.log(this.productDetail);
+  }
+
   openDialog(): void {
     if (!this.user) {
       const dialogRef = this.dialog.open(LoginModalsComponent, {
@@ -85,8 +63,6 @@ export class ProductDetailComponent implements OnInit {
 
   selectType(item) {
     this.selectedType = item;
-    console.log(this.selection)
-    console.log(this.selectedType);
   };
 
 }
