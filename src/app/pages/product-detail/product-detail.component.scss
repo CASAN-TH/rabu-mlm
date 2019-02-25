@@ -22,7 +22,7 @@
 }
 
 .btn-size {
-    width: 400px;
+    width: 100%;
 }
 
 .btn-type-selected {
@@ -33,4 +33,9 @@
     align-items: center;
     cursor: pointer;
     background-color: lightgrey;
+}
+
+.flex-item-center {
+    display: flex;
+    align-items: center;
 }
