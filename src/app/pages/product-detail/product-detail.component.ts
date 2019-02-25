@@ -10,6 +10,7 @@ import { MatDialog } from '@angular/material';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
+  loadData: any;
   user: any;
   productDetail: any = {
     data: {
@@ -71,7 +72,10 @@ export class ProductDetailComponent implements OnInit {
 
       dialogRef.afterClosed().subscribe(result => {
         console.log('The dialog was closed');
-        // this.animal = result;
+        this.loadData = result;
+        if(this.loadData){
+          this.ngOnInit();
+        }
       });
     } else {
       this.router.navigate(['/cart']);
