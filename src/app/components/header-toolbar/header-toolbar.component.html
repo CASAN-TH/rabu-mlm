@@ -1,0 +1,19 @@
+<mat-toolbar color="white">
+  <mat-toolbar-row class="container">
+    <img class="app-logo" src="https://res.cloudinary.com/dyiuidzsc/image/upload/v1548991271/Rabu%20Rabu/perfect%20lips/LOGO-RABU.png" >
+    <span class="example-spacer"></span>
+    <span *ngIf="userAuth">
+      <mat-icon class="example-icon">notifications</mat-icon>
+    </span>
+    <span class="profile" *ngIf="userAuth" [matMenuTriggerFor]="profile">
+      <img [src]="userAuth.profileImageURL" class="img" alt="img">
+      <span class="user-name">{{userAuth.username}}</span>
+    </span>
+    <mat-menu #profile="matMenu">
+      <button name="btn-logout" mat-menu-item (click)="onLogout()">
+        <mat-icon>power_settings_new</mat-icon>
+        <span>ออกจากระบบ</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
