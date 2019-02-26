@@ -23,6 +23,8 @@ export class ProductDetailComponent implements OnInit {
     _id: ""
   };
 
+  qty: any = 1;
+
   constructor(
     public dialog: MatDialog,
     public router: Router,
@@ -64,6 +66,21 @@ export class ProductDetailComponent implements OnInit {
   selectType(item) {
     this.selectedType = item;
   };
+
+  removeQty(){
+    this.qty = Number(this.qty) - 1;
+  }
+
+  addQty(){
+    this.qty = Number(this.qty) + 1;
+  }
+
+  checkSymbol(e) {
+    let regEx = new RegExp(/^[0-9]+$/);
+    if (!(regEx.test(e.key) || e.key === 'Backspace')) {
+      this.qty = this.qty.substring(0, this.qty.length - 1);
+    }
+  }
 
 }
 

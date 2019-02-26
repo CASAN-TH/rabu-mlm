@@ -39,3 +39,56 @@
     display: flex;
     align-items: center;
 }
+
+.bg-color {
+    background-color: white;
+}
+
+.input-style {
+    width: 60px;
+    padding: 4px;
+    border: 1px solid lightgray;
+    text-align: center;
+    font-size: 18px;
+}
+
+// input[type=number]::-webkit-inner-spin-button {
+//     -webkit-appearance: none;
+// }
+.input-style::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.btn-qty {
+    padding-left: 15px;
+    padding-right: 15px;
+    border: 1px solid lightgray;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+}
+
+.position-qty {
+    position: relative;
+    top: 0px;
+}
