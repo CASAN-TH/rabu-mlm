@@ -44,6 +44,14 @@ export class HomeComponent implements OnInit {
         url: 'https://cf.shopee.co.th/file/9029d32bdeb224771150e4fd158892ee'
       },
       price: '฿100'
+    },
+    {
+      name: 'rabu rabu ลิปติกสีส้ม',
+      detail: 'รายละเอียด',
+      image: {
+        url: '../../../assets/image/set.jpg'
+      },
+      price: '฿100'
     }
   ]
 
