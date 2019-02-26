@@ -2,6 +2,7 @@
     "data": {
         "name": "ทดสอบลิปติกแดง",
         "price": "120",
+        "amount": 55,
         "shipingfee": [
             {
                 "_id": "001",
